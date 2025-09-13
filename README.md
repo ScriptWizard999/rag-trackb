@@ -70,6 +70,7 @@ Create a **.env file:**
 
 
 **👉 Open your browser at http://localhost:8501**
+**Live Demo Link - https://rag-trackb-fyvjdhte4mvu7bknjyegrh.streamlit.app/**
 
 ### 📊 Evaluation
 - **Gold Q/A Pairs**
