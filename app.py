@@ -4,7 +4,7 @@ import sys
 import re
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-from query_text import rag_query
+from src.query_text import rag_query
 
 st.set_page_config(page_title="RAG Application", layout="wide")
 st.title("RAG-powered Q&A System")
