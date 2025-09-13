@@ -1,0 +1,6 @@
+openai
+pinecone
+cohere
+tiktoken
+streamlit
+python-dotenv
