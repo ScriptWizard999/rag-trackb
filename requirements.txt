@@ -1,4 +1,6 @@
 openai
+regex
+Langchain
 pinecone
 cohere
 tiktoken
