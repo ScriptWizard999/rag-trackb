@@ -3,10 +3,21 @@ import cohere
 from pinecone import Pinecone
 import re
 from dotenv import load_dotenv
+import streamlit as st
+import os
 
-load_dotenv()
-COHERE_API_KEY = os.getenv("COHERE_API_KEY")
-PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
+# If running on Streamlit Cloud
+if "COHERE_API_KEY" in st.secrets:
+    COHERE_API_KEY = st.secrets["COHERE_API_KEY"]
+    PINECONE_API_KEY = st.secrets["PINECONE_API_KEY"]
+    OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
+# If running locally (fallback to .env)
+else:
+    from dotenv import load_dotenv
+    load_dotenv()
+    COHERE_API_KEY = os.getenv("COHERE_API_KEY")
+    PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
+    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 co = cohere.Client(api_key=COHERE_API_KEY)
 pc = Pinecone(api_key=PINECONE_API_KEY)
