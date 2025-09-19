@@ -83,7 +83,7 @@ def rag_query(question):
 
 
         final_answer_response = co.chat(
-            model="command-r-plus",
+            model="command-a-03-2025",
             message=prompt,
             temperature=0.3
         )
